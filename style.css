@@ -1,0 +1,239 @@
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
+
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
+
+*{
+    box-sizing: border-box;
+    margin : 0;
+    padding: 0;
+}
+/*navbar styling-----------------------------------------------------------------------------------*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+.logo {
+    cursor: pointer;
+    width: 75px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-links{
+    list-style: none;
+    margin: 0;
+}
+.nav-links li {
+    display:inline-block;
+    padding: 0 20px;
+}
+.nav-links li a:hover{
+    color:white;
+}
+ul li a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: white;
+    margin: 0 10px;
+    padding: 10px 25px;
+    position: relative;
+}
+/*//🟣🟣🟣🟣🟣🟣🟣🟣NAV BUTTONS🟣🟣🟣🟣🟣🟣🟣🟣🟣*!*!*/
+button {
+
+    padding: 9px 25px;
+    color: #CC5500;
+    border: 2px solid #CC5500;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.button:hover{
+     background: #CC5500;
+     color: #000;
+     box-shadow: 0 0 50px #CC5500, 0 0 21px #CC5500;
+ }
+.button-fill{
+    background: #CC5500;
+    color: white;
+}
+.button-fill:hover{
+    transition: all 0.6s ease;
+    background: #000;
+    color: #CC5500;
+    box-shadow: 0 0 21px 0 #CC5500 inset, 0 0 50px #CC5500;
+}
+/*//🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑ENDS🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑*!*!*/
+.jumbotron{
+    display:flex;
+    align-items: center;
+    height: 450px;
+    background-size: cover ;
+    background-image: url("css-img/Untitled_design_27_21d8abf020.png");
+    animation: slide 20s infinite;
+}
+@keyframes slide {
+    33.3%{
+        background-image: url("css-img/banner-2.jpg");
+
+    }
+    66.6%{
+        background-image: url("css-img/coffee-cup-beans-black-background-banner-glass-sauser-copy-space-137318606.jpg");
+    }
+    99.9%{
+         background-image: url("css-img/coffee-header.jpg");
+     }
+}
+
+
+/*//🟣🟣🟣🟣🟣🟣🟣🟣🟣SUBSCRIBE BUTTON🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣*!*!*/
+.nav-links li a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: #CC5500;
+    z-index: -1 ;
+    box-shadow: 0 0 10px    #d73c02,
+    0 0 20px    #CC5500,
+    0 0 40px    #CC5500,
+    0 0 80px    #CC5500,
+    0 0 100px   #CC5500;
+    transition: 0.25s;
+}
+.nav-links li a:hover::before{
+    width: 100%;
+}
+/*//🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑ENDS🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑*/
+
+/*body styling-----------------------------------------------------------------------------*/
+body{
+    background-color: #24252a ;
+}
+h1{
+    width: 50%;
+    background: #CC5500;
+    text-align: center;
+}
+.sub-header{
+    text-align: left;
+    color: #edf0f1;
+    margin: 2em;
+}
+.coffee-search{
+    text-align: right;
+}
+.meat-and-potatoes{
+    display: flex;
+    align-items: center;
+}
+/*holds coffee names---------------------------------------------------------*/
+#coffees{
+    width: 50%;
+    margin: 0;
+    color: #edf0f1;
+}
+/*holds search and select bar*/
+.search-select{
+    width: 50%;
+    margin: 0;
+}
+/*searchbar-------------------------------------------------------------------*/
+.search-box{
+    position: absolute;
+    border: 2px orange solid;
+    height: 50px;
+    border-radius: 40px;
+    padding: 10px;
+    background: #24252a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 1.5em;  /*🟣🟣🟣🟣*/
+/*🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣*/
+    z-index: 0 ;
+    box-shadow: 0 0 10px    #d73c02,
+    0 0 20px    #CC5500,
+    0 0 40px    #CC5500,
+    0 0 80px    #CC5500,
+    0 0 100px   #CC5500;
+    transition: 0.25s;
+}
+/*🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑*/
+.search-box:hover > .search-txt{
+    width: 185px;
+}
+.search-box:hover > .search-btn{
+    /*background: white;*/
+}
+.search-btn{
+    float: right;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #24252a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    width: 0;
+    height: 30px;
+}
+.column{
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 5em ;
+}
+
+
+/*🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣*/
+.wuzUp{
+    background: #24252a;
+    border: none;
+    color: #d73c02;
+    margin-bottom: 12em;
+    margin-left: 1em;
+}
+/*🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣*/
+.glow{
+    border: 2px orange solid;
+    border-radius: 50px;
+    height: 40px;
+    text-align: center;
+    background-color: #24252a;
+    color: orange;
+    z-index: 0 ;
+    box-shadow: 0 0 10px    #d73c02,
+    0 0 20px    #CC5500,
+    0 0 40px    #CC5500,
+    0 0 80px    #CC5500,
+    0 0 100px   #CC5500;
+    transition: 0.25s;
+}
+/*🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑*/
+
